@@ -1,9 +1,9 @@
 {
-  "name": "nuxt-starter",
-  "version": "2.2.2",
+  "name": "prisma_cloudflare",
+  "version": "0.1.0",
   "private": true,
-  "repository": "https://github.com/becem-gharbi/nuxt-starter.git",
-  "homepage": "https://nuxt-starter.bg.tn",
+  "repository": "https://github.com/becem-gharbi/prisma-cloudflare.git",
+  "homepage": "https://prisma-cloudflare.bg.tn",
   "scripts": {
     "build": "prisma generate && nuxt build",
     "dev": "nuxt dev",

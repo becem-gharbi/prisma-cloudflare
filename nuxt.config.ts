@@ -4,8 +4,10 @@ import { auth, naiveui, tailwindcss } from './config'
 export default defineNuxtConfig({
   ssr: false,
 
+  spaLoadingTemplate: true,
+
   devtools: {
-    enabled: false
+    enabled: true
   },
 
   nitro: {
@@ -19,12 +21,12 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      title: 'Nuxt starter',
+      title: 'Prisma Cloudflare',
       htmlAttrs: {
         lang: 'en'
       },
       meta: [
-        { name: 'description', content: 'Edge compatible Nuxt starter' },
+        { name: 'description', content: 'Nuxt starter on Cloudflare with auth, prisma & Naive UI' },
         { name: 'theme-color', content: '#18181B' }
       ]
     }

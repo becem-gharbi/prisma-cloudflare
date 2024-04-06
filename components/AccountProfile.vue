@@ -13,7 +13,7 @@
         Update
       </n-button>
 
-      <n-button class="ml-auto" attr-type="button" type="error" @click="deleteAccount">
+      <n-button class="ml-auto" attr-type="button" type="error" tertiary @click="deleteAccount">
         Delete
       </n-button>
     </div>
