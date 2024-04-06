@@ -10,7 +10,8 @@ export default defineNuxtConfig({
     preset: 'cloudflare-pages',
     modules: [nitroCloudflareBindings],
     experimental: {
-      database: true
+      database: true,
+      wasm: true
     }
   },
 
