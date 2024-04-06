@@ -5,9 +5,9 @@
   "repository": "https://github.com/becem-gharbi/prisma-cloudflare.git",
   "homepage": "https://prisma-cloudflare.bg.tn",
   "scripts": {
-    "build": "prisma generate && nuxt build",
+    "build": "nuxt build",
     "dev": "nuxt dev",
-    "generate": "prisma generate && nuxt generate",
+    "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare && prisma generate",
     "release": "npm run lint && npm run typecheck && changelogen --release && git push --follow-tags",
