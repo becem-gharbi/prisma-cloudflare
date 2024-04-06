@@ -1,10 +1,9 @@
-name= "nuxt-cloudflare"
-main = "./.output/server/index.mjs"
-compatibility_date = "2024-03-20"
-compatibility_flags = ["nodejs_compat"]
+name = "nuxt-cloudflare"
+pages_build_output_dir = "dist"
+compatibility_date = "2024-04-06"
 
 [[ d1_databases ]]
-binding = "DB" # i.e. available in your Worker on env.DB
+binding = "DB"
 database_name = "nuxt-cf-db"
 database_id = "8f61b136-bef6-47f3-8c2f-010064ecc0d7"
 migrations_dir= "./cloudflare/migrations"
