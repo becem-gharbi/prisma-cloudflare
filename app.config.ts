@@ -1,5 +1,3 @@
-import { generateColorThemes } from '@bg-dev/nuxt-naiveui/utils'
-
 export default defineAppConfig({
   naiveui: {
     themeConfig: {
@@ -8,8 +6,7 @@ export default defineAppConfig({
           borderRadius: '4px',
           baseColor: 'white'
         }
-      },
-      ...generateColorThemes()
+      }
     }
   }
 })

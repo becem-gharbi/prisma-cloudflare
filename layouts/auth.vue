@@ -15,10 +15,6 @@
         <div class="px-8 py-4 max-w-sm mx-auto w-full">
           <slot />
         </div>
-
-        <div>
-          <Footer />
-        </div>
       </div>
 
       <div class="w-2/3 hidden md:block bg-gradient-to-r from-cyan-500 to-blue-500" />

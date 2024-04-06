@@ -1,10 +1,10 @@
 import nitroCloudflareBindings from 'nitro-cloudflare-dev'
-import { auth, naiveui, tailwindcss, s3, security } from './config'
+import { auth, naiveui, tailwindcss, s3 } from './config'
 
 export default defineNuxtConfig({
-  ssr: true,
+  ssr: false,
 
-  devtools: { enabled: true },
+  devtools: { enabled: false },
 
   nitro: {
     preset: 'cloudflare-pages',
@@ -34,19 +34,11 @@ export default defineNuxtConfig({
     '@bg-dev/nuxt-auth',
     '@bg-dev/nuxt-naiveui',
     '@nuxtjs/tailwindcss',
-    'nuxt-s3',
-    'nuxt-security'
+    'nuxt-s3'
   ],
 
   auth,
   naiveui,
   tailwindcss,
-  s3,
-  security,
-
-  routeRules: {
-    '/api/s3/mutation/**': { security: { xssValidator: false } },
-    '/api/s3/**': { security: { rateLimiter: { tokensPerInterval: 10, interval: 30000 } } },
-    '/api/auth/**': { security: { rateLimiter: { tokensPerInterval: 15, interval: 30000 } } }
-  }
+  s3
 })

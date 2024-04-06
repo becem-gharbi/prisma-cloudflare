@@ -31,7 +31,6 @@
 
 <script setup lang="ts">
 const { user } = useAuthSession()
-const { upload } = useS3Object()
 const { fetchUser } = useAuth()
 
 const model = ref({
@@ -43,18 +42,6 @@ const model = ref({
 const { edited, pending, onSubmit, reset, formRef } = useNaiveForm(model)
 
 async function updateAccount () {
-  if (model.value.file) {
-    const url = await upload(model.value.file, {
-      url: model.value.picture,
-      prefix: `${user.value!.id}/`,
-      meta: {
-        'user-id': user.value!.id
-      }
-    })
-
-    model.value.picture = url
-  }
-
   await useNuxtApp().$auth.fetch('/api/user', {
     method: 'patch',
     body: {
