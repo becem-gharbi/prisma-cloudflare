@@ -1,10 +1,12 @@
 import nitroCloudflareBindings from 'nitro-cloudflare-dev'
-import { auth, naiveui, tailwindcss, s3 } from './config'
+import { auth, naiveui, tailwindcss } from './config'
 
 export default defineNuxtConfig({
   ssr: false,
 
-  devtools: { enabled: false },
+  devtools: {
+    enabled: false
+  },
 
   nitro: {
     preset: 'cloudflare-pages',
@@ -33,12 +35,10 @@ export default defineNuxtConfig({
   modules: [
     '@bg-dev/nuxt-auth',
     '@bg-dev/nuxt-naiveui',
-    '@nuxtjs/tailwindcss',
-    'nuxt-s3'
+    '@nuxtjs/tailwindcss'
   ],
 
   auth,
   naiveui,
-  tailwindcss,
-  s3
+  tailwindcss
 })

@@ -26,7 +26,6 @@
     "eslint": "^8.57.0",
     "nitro-cloudflare-dev": "^0.1.4",
     "nuxt": "^3.11.1",
-    "nuxt-s3": "1.2.0",
     "prisma": "^5.12.1",
     "wrangler": "^3.48.0"
   },
