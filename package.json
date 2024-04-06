@@ -24,6 +24,7 @@
     "@types/ua-parser-js": "^0.7.39",
     "changelogen": "^0.5.5",
     "eslint": "^8.57.0",
+    "nitro-cloudflare-dev": "^0.1.4",
     "nuxt": "^3.11.1",
     "nuxt-s3": "1.2.0",
     "nuxt-security": "^1.2.2",
