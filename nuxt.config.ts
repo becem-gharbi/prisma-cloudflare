@@ -5,10 +5,6 @@ export default defineNuxtConfig({
 
   devtools: { enabled: true },
 
-  nitro: {
-    preset: process.env.NITRO_PRESET
-  },
-
   app: {
     head: {
       title: 'Nuxt starter',

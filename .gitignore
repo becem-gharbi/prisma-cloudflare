@@ -13,3 +13,5 @@ docker-compose.yml
 uploads
 data
 prisma/migrations
+.wrangler
+cloudflare
