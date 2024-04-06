@@ -20,8 +20,8 @@
 const { user } = useAuthSession()
 
 const model = ref({
-  name: user.value?.name,
-  picture: user.value?.picture
+  name: user.value!.name,
+  picture: user.value!.picture
 })
 
 const { edited, pending, onSubmit, reset, formRef } = useNaiveForm(model)
@@ -34,8 +34,6 @@ async function updateAccount () {
       picture: model.value.picture
     }
   })
-
-  model.value.file = null
 
   await useAuth().fetchUser()
 }

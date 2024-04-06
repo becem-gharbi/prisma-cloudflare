@@ -1,9 +1,5 @@
 export default defineEventHandler(async (event) => {
-  const userId = event.context.auth?.userId
-
-  if (!userId) {
-    throw createError({ message: 'unauthorized', statusCode: 401 })
-  }
+  const { userId } = checkAuth(event)
 
   const { name } = await readBody(event)
 

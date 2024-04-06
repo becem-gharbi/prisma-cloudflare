@@ -2,10 +2,7 @@
   <naive-layout-navbar :routes="routes" :drawer-routes="drawerRoutes">
     <template #start>
       <nuxt-link to="/" class="flex items-center gap-3">
-        <naive-icon name="logos:nuxt-icon" :size="25" />
-        <n-text strong>
-          Nuxt starter
-        </n-text>
+        <basic-logo />
       </nuxt-link>
     </template>
 

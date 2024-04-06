@@ -1,23 +1,15 @@
 <template>
-  <div class="page">
-    <div class="flex-1 flex">
-      <div class="md:w-1/3 w-full flex flex-col justify-between">
-        <div class="px-8 mt-10">
-          <n-text class="text-lg font-semibold">
-            Nuxt starter
-          </n-text>
-          <br>
-          <n-text class="text-lg" :depth="2">
-            {{ title }}
-          </n-text>
-        </div>
+  <div class="page justify-center items-center p-7">
+    <NuxtLink to="/" class="mr-auto sm:mr-0">
+      <basic-logo class="text-lg" />
+    </NuxtLink>
 
-        <div class="px-8 py-4 max-w-sm mx-auto w-full">
-          <slot />
-        </div>
-      </div>
+    <n-text class="text-lg font-medium mt-1 mr-auto sm:mr-0" depth="3">
+      {{ title }}
+    </n-text>
 
-      <div class="w-2/3 hidden md:block bg-gradient-to-r from-cyan-500 to-blue-500" />
+    <div class="w-full my-auto sm:max-w-sm sm:p-6">
+      <slot />
     </div>
   </div>
 </template>

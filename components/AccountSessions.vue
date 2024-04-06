@@ -38,15 +38,15 @@
 </template>
 
 <script setup lang="ts">
+// eslint-disable-next-line import/named
 import { UAParser } from 'ua-parser-js'
 
 const { getAllSessions, revokeSession } = useAuthSession()
 
 const { data: sessions } = await useAsyncData('user-sessions', getAllSessions)
 
-async function handleSessionRevoke (id: string) {
+async function handleSessionRevoke (id: number) {
   await revokeSession(id)
-
   sessions.value = sessions.value!.filter(el => el.id !== id)
 }
 </script>

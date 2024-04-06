@@ -4,7 +4,7 @@
       <AccountProfile />
     </n-card>
 
-    <n-card v-if="user?.provider === 'default'" title="Password" segmented size="small">
+    <n-card v-if="user!.provider === 'default'" title="Password" segmented size="small">
       <AccountPassword />
     </n-card>
 
@@ -18,6 +18,6 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 const { user } = useAuthSession()
 </script>
