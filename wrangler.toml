@@ -1,12 +1,8 @@
-name="nuxt-cloudflare"
+name= "nuxt-cloudflare"
+pages_build_output_dir = "./dist"
 main = "./.output/server/index.mjs"
 compatibility_date = "2024-03-20"
 compatibility_flags = ["nodejs_compat"]
-
-rules = [
-    { type = "ESModule", globs = ["**/*.js", "**/*.mjs"]},
-]
-
 
 [[ d1_databases ]]
 binding = "DB" # i.e. available in your Worker on env.DB
