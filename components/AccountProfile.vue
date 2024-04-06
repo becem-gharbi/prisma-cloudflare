@@ -12,6 +12,10 @@
       <n-button attr-type="submit" :loading="pending" :disabled="pending || !edited" type="primary">
         Update
       </n-button>
+
+      <n-button class="ml-auto" attr-type="button" type="error" @click="deleteAccount">
+        Delete
+      </n-button>
     </div>
   </n-form>
 </template>
@@ -36,5 +40,16 @@ async function updateAccount () {
   })
 
   await useAuth().fetchUser()
+}
+
+async function deleteAccount () {
+  if (window.confirm('Do you want to permanently delete your account?')) {
+    await useNuxtApp().$auth.fetch('/api/user', {
+      method: 'delete',
+      credentials: 'include'
+    })
+
+    location.reload()
+  }
 }
 </script>

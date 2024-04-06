@@ -28,7 +28,7 @@ model RefreshToken {
   id        Int      @id @default(autoincrement())
   uid       String
   userId    Int
-  user      User     @relation(fields: [userId], references: [id])
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
   userAgent String?
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
