@@ -1,4 +1,3 @@
--- Migration number: 0001 	 2024-04-06T23:38:48.997Z
 -- CreateTable
 CREATE TABLE "User" (
     "id" TEXT NOT NULL PRIMARY KEY,
@@ -12,7 +11,8 @@ CREATE TABLE "User" (
     "suspended" BOOLEAN NOT NULL DEFAULT false,
     "requestedPasswordReset" BOOLEAN NOT NULL DEFAULT false,
     "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    "updatedAt" DATETIME NOT NULL
+    "updatedAt" DATETIME NOT NULL,
+    "lastName" TEXT
 );
 
 -- CreateTable
@@ -31,4 +31,3 @@ CREATE UNIQUE INDEX "User_email_key" ON "User"("email");
 
 -- CreateIndex
 CREATE INDEX "RefreshToken_userId_idx" ON "RefreshToken"("userId");
-

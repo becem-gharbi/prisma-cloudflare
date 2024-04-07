@@ -52,6 +52,9 @@ devDependencies:
   prisma:
     specifier: ^5.12.1
     version: 5.12.1
+  toml:
+    specifier: ^3.0.0
+    version: 3.0.0
   wrangler:
     specifier: ^3.48.0
     version: 3.48.0
@@ -8967,6 +8970,10 @@ packages:
   /toidentifier@1.0.1:
     resolution: {integrity: sha512-o5sSPKEkg/DIQNmH43V0/uerLrpzVedkUh8tGNvaeXpfpuwjKenlSox/2O/BTlZUtEe+JG7s5YhEz608PlAHRA==}
     engines: {node: '>=0.6'}
+    dev: true
+
+  /toml@3.0.0:
+    resolution: {integrity: sha512-y/mWCZinnvxjTKYhJ+pYxwD0mRLVvOtdS2Awbgxln6iEnt4rk0yBxeSBHkGJcPucRiG0e55mwWp+g/05rsrd6w==}
     dev: true
 
   /totalist@3.0.1:

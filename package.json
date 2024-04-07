@@ -9,10 +9,12 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare && prisma generate",
+    "postinstall": "nuxt prepare",
     "release": "npm run lint && npm run typecheck && changelogen --release && git push --follow-tags",
     "lint": "eslint .",
-    "typecheck": "nuxi typecheck"
+    "typecheck": "nuxi typecheck",
+    "migrate:generate": "node prisma/scripts/migrate_generate.mjs",
+    "migrate:apply": "node prisma/scripts/migrate_apply.mjs"
   },
   "devDependencies": {
     "@bg-dev/nuxt-auth": "2.5.1",
@@ -27,6 +29,7 @@
     "nitro-cloudflare-dev": "^0.1.4",
     "nuxt": "^3.11.1",
     "prisma": "^5.12.1",
+    "toml": "^3.0.0",
     "wrangler": "^3.48.0"
   },
   "dependencies": {
