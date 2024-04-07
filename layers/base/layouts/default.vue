@@ -36,7 +36,9 @@
     </template>
 
     <div class="flex-1 container mx-auto my-8 px-4">
-      <slot />
+      <n-dialog-provider>
+        <slot />
+      </n-dialog-provider>
     </div>
   </naive-layout-navbar>
 </template>

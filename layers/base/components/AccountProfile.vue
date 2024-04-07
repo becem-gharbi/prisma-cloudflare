@@ -22,6 +22,7 @@
 
 <script setup lang="ts">
 const { user } = useAuthSession()
+const dialog = useDialog()
 
 const model = ref({
   name: user.value!.name,
@@ -42,14 +43,17 @@ async function updateAccount () {
   await useAuth().fetchUser()
 }
 
-async function deleteAccount () {
-  if (window.confirm('Do you want to permanently delete your account?')) {
-    await useNuxtApp().$auth.fetch('/api/user', {
-      method: 'delete',
-      credentials: 'include'
-    })
-
-    location.reload()
-  }
+function deleteAccount () {
+  dialog.warning({
+    title: 'Delete account',
+    content: 'Do you want to permanently delete your account?',
+    negativeText: 'No',
+    positiveText: 'Yes',
+    onPositiveClick: () =>
+      useNuxtApp().$auth.fetch('/api/user', {
+        method: 'delete',
+        credentials: 'include'
+      }).then(() => location.reload())
+  })
 }
 </script>
