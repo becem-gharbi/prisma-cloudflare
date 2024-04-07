@@ -1,6 +1,6 @@
 {
   "name": "prisma_cloudflare",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "repository": "https://github.com/becem-gharbi/prisma-cloudflare.git",
   "homepage": "https://prisma-cloudflare.bg.tn",
