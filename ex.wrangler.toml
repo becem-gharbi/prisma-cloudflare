@@ -1,0 +1,5 @@
+[[ d1_databases ]]
+binding = "DB"
+migrations_dir= "./migrations"
+database_name = __YOUR_DATABASE_NAME__
+database_id = __YOUR_DATABASE_ID__

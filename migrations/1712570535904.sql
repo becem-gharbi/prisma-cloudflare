@@ -11,8 +11,7 @@ CREATE TABLE "User" (
     "suspended" BOOLEAN NOT NULL DEFAULT false,
     "requestedPasswordReset" BOOLEAN NOT NULL DEFAULT false,
     "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    "updatedAt" DATETIME NOT NULL,
-    "lastName" TEXT
+    "updatedAt" DATETIME NOT NULL
 );
 
 -- CreateTable
