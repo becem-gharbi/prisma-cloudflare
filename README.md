@@ -1,62 +1,51 @@
-# Nuxt 3 starter
+# Prisma Cloudflare
 
-A modular template that provides essential features to quickly get started on your full stack Nuxt 3 project
+This project is a Nuxt starter app with auth and Naive UI using Prisma with D1 database deployed on Cloudflare pages.
 
-## Features
+Cloudflare offers a worlwide network to serve static content and run serverless code with native object and database binding.
+Nuxt is a fullstack framework for building server-rendered Vue apps and runtime agnostic web services.
+To get started building Nuxt apps on Cloudflare it's recommended to use [Nuxt Hub](https://hub.nuxt.com) platform for zero configuration.
 
-- ✔️ Edge compatible
-- ✔️ Prisma integration
-- ✔️ User authentication with password and social login via [@bg-dev/nuxt-auth](https://nuxt-auth.bg.tn) module
-- ✔️ File upload to S3 compatible file storage services via [nuxt-s3](https://nuxt-s3.bg.tn) module
-- ✔️ Customizable UI layer based on Naive UI via [@bg-dev/nuxt-naiveui](https://nuxt-naiveui.bg.tn) module
-- ✔️ Tailwindcss integration via [@nuxtjs/tailwindcss](https://tailwindcss.nuxtjs.org) module
-- ✔️ HTTP security via [nuxt-security](https://nuxt-security.vercel.app) module
+Prisma is an ORM that supports edge deployment either via a proxy runnig on Prisma accelerate or via driver adapters. This project uses Cloudflare D1 driver which is recently introduced on version 5.12.0. The limitations are:
+
+- This feature is in currently in preview thus not recommended for production.
+
+- The query engine is bundled with currently 782kB which limits the app size for the free tier where the server bundle size cannot exceed 1mB. For such case it's recommended to disable SSR.
+
+- The database migration should be made with Cloudflare Wrangler instead of Prisma Migrate. This project handles the migration [workflows](https://www.prisma.io/docs/orm/overview/databases/cloudflare-d1#migration-workflows) via `migrate` scripts.
 
 ## Setup
 
-1. Create new repository from this [template](https://github.com/becem-gharbi/nuxt-starter).
-1. Rename `.example.env` to `.env` and set the environment variables.
-1. Make sure to install the dependencies:
+To get started you will need to have a Cloudflare account and to input the configuration through the [dashboard](https://dash.cloudflare.com).
+
+- Install dependencies.
 
 ```bash
-# yarn
-yarn install
-
-# npm
-npm install
-
-# pnpm
 pnpm install
 ```
 
-4. Run prisma generate
+- Rename `.example.env` to `.env` and set env variables, check [@bg-dev/nuxt-auth](https://nuxt-auth.bg.tn).
+
+- Deploy the project on Cloudflare pages and add the env variables.
+
+- Create a new D1 database and [bind](https://developers.cloudflare.com/pages/functions/bindings/#d1-databases) it to the Page project.
+
+- Rename `ex.wrangler.toml` to `wrangler.toml` and set `database_name` and `database_id`. This will be used by Wrangler.
+
+- Generate new migration.
 
 ```bash
-npx prisma generate
+pnpm migrate:generate
 ```
 
-That's it! You can now get started on your project ✨
-
-## Development Server
-
-Start the development server on http://localhost:3000
+- Apply migration on local database.
 
 ```bash
-npm run dev
+pnpm migrate:apply
 ```
 
-## Production
-
-Build the application for production:
+- Apply migration on remote database.
 
 ```bash
-npm run build
+pnpm migrate:apply --remote
 ```
-
-Locally preview production build:
-
-```bash
-npm run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
