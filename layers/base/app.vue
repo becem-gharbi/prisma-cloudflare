@@ -4,6 +4,10 @@
     <NuxtLayout>
       <NuxtPage />
     </NuxtLayout>
+
+    <div class="fixed bottom-2 flex w-full justify-center">
+      <repo-link />
+    </div>
   </NaiveConfig>
 </template>
 
