@@ -1,6 +1,34 @@
 # Changelog
 
 
+## v0.1.2
+
+[compare changes](https://github.com/becem-gharbi/prisma-cloudflare/compare/v0.1.1...v0.1.2)
+
+### 🚀 Enhancements
+
+- Add `migrate` scripts to simplify db migrations ([1376780](https://github.com/becem-gharbi/prisma-cloudflare/commit/1376780))
+- Show naiveui dialog on account delete ([c5368b6](https://github.com/becem-gharbi/prisma-cloudflare/commit/c5368b6))
+
+### 💅 Refactors
+
+- Increase dropdown min width ([066f460](https://github.com/becem-gharbi/prisma-cloudflare/commit/066f460))
+
+### 📖 Documentation
+
+- Update README ([ecf255e](https://github.com/becem-gharbi/prisma-cloudflare/commit/ecf255e))
+
+### 🏡 Chore
+
+- **migrations:** Try alter table ([5f80af4](https://github.com/becem-gharbi/prisma-cloudflare/commit/5f80af4))
+- Update wrangler.toml ([64cd191](https://github.com/becem-gharbi/prisma-cloudflare/commit/64cd191))
+- Allow override database name on `migrate:apply` script ([ebfd367](https://github.com/becem-gharbi/prisma-cloudflare/commit/ebfd367))
+- Add repo link ([c87d264](https://github.com/becem-gharbi/prisma-cloudflare/commit/c87d264))
+
+### ❤️ Contributors
+
+- Becem-gharbi ([@becem-gharbi](http://github.com/becem-gharbi))
+
 ## v0.1.1
 
 
