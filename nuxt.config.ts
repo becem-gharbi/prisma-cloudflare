@@ -2,7 +2,6 @@ export default defineNuxtConfig({
   extends: ['./layers/base'],
 
   ssr: false,
-  spaLoadingTemplate: true,
 
   devtools: {
     enabled: false
