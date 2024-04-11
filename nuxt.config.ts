@@ -1,8 +1,6 @@
 export default defineNuxtConfig({
   extends: ['./layers/base'],
 
-  ssr: false,
-
   devtools: {
     enabled: false
   },

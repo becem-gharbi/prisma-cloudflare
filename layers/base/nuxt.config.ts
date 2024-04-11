@@ -2,6 +2,8 @@ import nitroCloudflareBindings from 'nitro-cloudflare-dev'
 import { auth, naiveui, tailwindcss } from './config'
 
 export default defineNuxtConfig({
+  ssr: false,
+
   nitro: {
     modules: [nitroCloudflareBindings],
     experimental: {
