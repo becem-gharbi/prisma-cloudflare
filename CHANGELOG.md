@@ -1,6 +1,26 @@
 # Changelog
 
 
+## v0.1.3
+
+[compare changes](https://github.com/becem-gharbi/prisma-cloudflare/compare/v0.1.2...v0.1.3)
+
+### 🚀 Enhancements
+
+- Add spa loading animation ([03abe6b](https://github.com/becem-gharbi/prisma-cloudflare/commit/03abe6b))
+
+### 🔥 Performance
+
+- Download icons ([4788e2b](https://github.com/becem-gharbi/prisma-cloudflare/commit/4788e2b))
+
+### 💅 Refactors
+
+- Disable ssr on base layer ([45c4793](https://github.com/becem-gharbi/prisma-cloudflare/commit/45c4793))
+
+### ❤️ Contributors
+
+- Becem-gharbi <becem.gharbi@live.com>
+
 ## v0.1.2
 
 [compare changes](https://github.com/becem-gharbi/prisma-cloudflare/compare/v0.1.1...v0.1.2)
