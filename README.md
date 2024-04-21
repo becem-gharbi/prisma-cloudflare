@@ -32,6 +32,11 @@ pnpm install
 
 - Rename `ex.wrangler.toml` to `wrangler.toml` and set `database_name` and `database_id`. This will be used by Wrangler.
 
+- Generate Prisma client
+```bash
+npx prisma generate
+```
+
 - Apply migration on local database.
 
 ```bash
@@ -44,7 +49,7 @@ pnpm migrate:apply
 pnpm migrate:apply --remote
 ```
 
-- Generate new migration file after updating Prisma schema.
+- Generate new migration file after updating Prisma schema (optional).
 
 ```bash
 pnpm migrate:generate
