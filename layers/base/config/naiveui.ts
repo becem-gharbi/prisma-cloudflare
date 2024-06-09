@@ -4,6 +4,6 @@ export const naiveui: Partial<ModuleOptions> = {
   colorModePreference: 'system',
   iconDownload: true,
   spaLoadingTemplate: {
-    name: 'plane-wave'
-  }
+    name: 'plane-wave',
+  },
 }

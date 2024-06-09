@@ -1,7 +1,6 @@
-/* eslint-disable no-console */
 import { applyMigration, getDatabaseInfo } from './utils.mjs'
 
-async function start () {
+async function start() {
   try {
     const database = getDatabaseInfo()
 
@@ -17,7 +16,8 @@ async function start () {
 
     console.log(`⌛ Apply migrations to ${environment} <${database.name}> database \n`)
     await applyMigration(database.name, environment)
-  } catch (err) {
+  }
+  catch (err) {
     console.error(`❌ ${err}`)
   }
 }

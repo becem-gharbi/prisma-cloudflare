@@ -1,10 +1,26 @@
 <template>
-  <n-form ref="formRef" :rules="rules" :model="model" @submit.prevent="onSubmit(handleSubmit)">
-    <n-form-item label="Email" path="email" :show-require-mark="false">
-      <n-input v-model:value="model.email" :input-props="{ autocomplete: 'username' }" />
+  <n-form
+    ref="formRef"
+    :rules="rules"
+    :model="model"
+    @submit.prevent="onSubmit(handleSubmit)"
+  >
+    <n-form-item
+      label="Email"
+      path="email"
+      :show-require-mark="false"
+    >
+      <n-input
+        v-model:value="model.email"
+        :input-props="{ autocomplete: 'username' }"
+      />
     </n-form-item>
 
-    <n-form-item path="password" :show-require-mark="false" :label-style="{ display: 'block' }">
+    <n-form-item
+      path="password"
+      :show-require-mark="false"
+      :label-style="{ display: 'block' }"
+    >
       <n-input
         v-model:value="model.password"
         type="password"
@@ -13,7 +29,10 @@
       />
       <template #label>
         <span>Password</span>
-        <nuxt-link to="/auth/request-password-reset" class="no-underline float-end">
+        <nuxt-link
+          to="/auth/request-password-reset"
+          class="no-underline float-end"
+        >
           <n-text type="primary">
             Forgot password?
           </n-text>
@@ -22,7 +41,13 @@
     </n-form-item>
 
     <div class="flex flex-col gap-4">
-      <n-button attr-type="submit" block :loading="pending" :disabled="pending" type="primary">
+      <n-button
+        attr-type="submit"
+        block
+        :loading="pending"
+        :disabled="pending"
+        type="primary"
+      >
         Login
       </n-button>
 
@@ -34,7 +59,10 @@
       </n-button>
 
       <nuxt-link to="/auth/register">
-        <n-button attr-type="button" block>
+        <n-button
+          attr-type="button"
+          block
+        >
           Create Account
         </n-button>
       </nuxt-link>
@@ -43,12 +71,11 @@
 </template>
 
 <script setup lang="ts">
-
 definePageMeta({
   middleware: 'guest',
   auth: false,
   colorMode: 'light',
-  layout: 'auth'
+  layout: 'auth',
 })
 
 const { formRef, rules, pending, apiErrors, onSubmit } = useNaiveForm()
@@ -56,14 +83,14 @@ const { login, loginWithProvider } = useAuth()
 
 const model = ref({
   email: '',
-  password: ''
+  password: '',
 })
 
 apiErrors.value = {
   wrongCredentials: false,
   invalidProvider: false,
   accountNotVerified: false,
-  accountSuspended: false
+  accountSuspended: false,
 }
 
 rules.value = {
@@ -71,38 +98,38 @@ rules.value = {
     {
       required: true,
       message: 'Please input your email',
-      trigger: 'blur'
+      trigger: 'blur',
     },
     {
       type: 'email',
-      message: 'Should be a valid email address'
+      message: 'Should be a valid email address',
     },
     {
       message: 'Wrong credentials',
-      validator: () => !apiErrors.value.wrongCredentials
+      validator: () => !apiErrors.value.wrongCredentials,
     },
     {
       message: 'Your account is not verified',
-      validator: () => !apiErrors.value.accountNotVerified
+      validator: () => !apiErrors.value.accountNotVerified,
     },
     {
       message: 'Your account is suspended',
-      validator: () => !apiErrors.value.accountSuspended
-    }
+      validator: () => !apiErrors.value.accountSuspended,
+    },
   ],
   password: [
     {
       required: true,
       message: 'Please input your password',
-      trigger: 'blur'
-    }
-  ]
+      trigger: 'blur',
+    },
+  ],
 }
 
-async function handleSubmit () {
+async function handleSubmit() {
   await login({
     email: model.value.email,
-    password: model.value.password
+    password: model.value.password,
   }).catch((error) => {
     apiErrors.value.wrongCredentials = error.data.message === 'Wrong credentials'
     apiErrors.value.accountNotVerified = error.data.message === 'Account not verified'

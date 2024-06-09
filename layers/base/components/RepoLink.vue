@@ -1,6 +1,12 @@
 <template>
-  <nuxt-link :to="repository" target="_blank">
-    <n-button text class="opacity-80">
+  <nuxt-link
+    :to="repository"
+    target="_blank"
+  >
+    <n-button
+      text
+      class="opacity-80"
+    >
       <template #icon>
         <naive-icon name="tabler:brand-github" />
       </template>

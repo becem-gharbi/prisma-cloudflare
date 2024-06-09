@@ -5,11 +5,11 @@ export default defineEventHandler(async (event) => {
 
   const user = await event.context.auth.adapter.source.user.update({
     where: {
-      id: userId
+      id: userId,
     },
     data: {
-      name
-    }
+      name,
+    },
   })
 
   return user
