@@ -1,6 +1,35 @@
 # Changelog
 
 
+## v0.2.0
+
+[compare changes](https://github.com/becem-gharbi/prisma-cloudflare/compare/v0.1.3...v0.2.0)
+
+### 🚀 Enhancements
+
+- ⚠️  Migrate to `nuxt-auth` v3 ([e3727bf](https://github.com/becem-gharbi/prisma-cloudflare/commit/e3727bf))
+
+### 🩹 Fixes
+
+- **registration:** Resend verification email if account not verified ([d90dcd6](https://github.com/becem-gharbi/prisma-cloudflare/commit/d90dcd6))
+
+### 📖 Documentation
+
+- Update README.md ([b5d4f35](https://github.com/becem-gharbi/prisma-cloudflare/commit/b5d4f35))
+
+### 🏡 Chore
+
+- **lint:** Migrate to `@nuxt/eslint` ([9a2d7e8](https://github.com/becem-gharbi/prisma-cloudflare/commit/9a2d7e8))
+
+#### ⚠️ Breaking Changes
+
+- ⚠️  Migrate to `nuxt-auth` v3 ([e3727bf](https://github.com/becem-gharbi/prisma-cloudflare/commit/e3727bf))
+
+### ❤️ Contributors
+
+- Becem-gharbi <becem.gharbi@live.com>
+- Becem <becem.gharbi@live.com>
+
 ## v0.1.3
 
 [compare changes](https://github.com/becem-gharbi/prisma-cloudflare/compare/v0.1.2...v0.1.3)
