@@ -3,7 +3,7 @@ export default defineEventHandler(async (event) => {
 
   const config = useRuntimeConfig()
 
-  await event.context.prisma.user.delete({
+  await event.context.auth.adapter.source.user.delete({
     where: {
       id: userId
     }

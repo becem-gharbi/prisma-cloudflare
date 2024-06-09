@@ -3,7 +3,7 @@ export default defineEventHandler(async (event) => {
 
   const { name } = await readBody(event)
 
-  const user = await event.context.prisma.user.update({
+  const user = await event.context.auth.adapter.source.user.update({
     where: {
       id: userId
     },

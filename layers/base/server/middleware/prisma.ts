@@ -1,13 +1,21 @@
 import { PrismaClient } from '@prisma/client'
 import { PrismaD1 } from '@prisma/adapter-d1'
+import { usePrismaAdapter, setEventContext } from '#auth_utils'
+import type { Adapter } from '#auth_adapter'
 
-let prisma: PrismaClient | null = null
+let adapter: Adapter | null = null
 
-export default defineEventHandler((event) => {
-  if (!prisma) {
-    prisma = new PrismaClient({
-      adapter: new PrismaD1(event.context.cloudflare.env.DB as any)
-    })
-  }
-  event.context.prisma = prisma
+declare module '#auth_adapter' {
+    type Source = PrismaClient
+}
+
+export default defineEventHandler(async (event) => {
+    if (!adapter) {
+        const prisma = new PrismaClient({
+            adapter: new PrismaD1(event.context.cloudflare.env.DB as any)
+        })
+
+        adapter = usePrismaAdapter(prisma)
+    }
+    await setEventContext(event, adapter)
 })
