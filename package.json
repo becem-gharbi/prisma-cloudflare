@@ -18,7 +18,7 @@
   },
   "devDependencies": {
     "@bg-dev/nuxt-auth": "3.0.0-edge.5",
-    "@bg-dev/nuxt-naiveui": "1.13.0",
+    "@bg-dev/nuxt-naiveui": "2.0.0-rc.1",
     "@nuxt/devtools": "^1.1.5",
     "@nuxt/eslint": "^0.3.13",
     "@nuxtjs/tailwindcss": "^6.11.4",
