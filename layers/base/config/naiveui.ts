@@ -1,4 +1,5 @@
 import type { ModuleOptions } from '@bg-dev/nuxt-naiveui'
+import { generateTailwindColorThemes } from '@bg-dev/nuxt-naiveui/utils'
 
 export const naiveui: Partial<ModuleOptions> = {
   colorModePreference: 'system',
@@ -6,4 +7,7 @@ export const naiveui: Partial<ModuleOptions> = {
   spaLoadingTemplate: {
     name: 'plane-wave',
   },
+  themeConfig: {
+    ...generateTailwindColorThemes(),
+  }
 }
