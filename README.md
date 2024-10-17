@@ -10,7 +10,7 @@ Prisma is an ORM that supports edge deployment either via a proxy runnig on Pris
 
 - This feature is in currently in preview.
 
-- The query engine is bundled with currently 782kB which limits the app size for the free tier where the server bundle size cannot exceed 1mB.
+- The query engine is bundled with currently 770kB which limits the app size for the free tier where the server bundle size cannot exceed 1MB.
 
 - The database migration should be made with Wrangler instead of Prisma migrate command. This project handles the migration [workflows](https://www.prisma.io/docs/orm/overview/databases/cloudflare-d1#migration-workflows) via `migrate` scripts.
 
