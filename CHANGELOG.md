@@ -1,6 +1,26 @@
 # Changelog
 
 
+## v0.2.1
+
+[compare changes](https://github.com/becem-gharbi/prisma-cloudflare/compare/v0.2.0...v0.2.1)
+
+### 🚀 Enhancements
+
+- Migrate to `nuxt-naiveui` v2 ([5e91f6f](https://github.com/becem-gharbi/prisma-cloudflare/commit/5e91f6f))
+
+### 📖 Documentation
+
+- Update prisma query engine's bundle size ([de1f1fd](https://github.com/becem-gharbi/prisma-cloudflare/commit/de1f1fd))
+
+### 🏡 Chore
+
+- Lint fix ([9dd4bac](https://github.com/becem-gharbi/prisma-cloudflare/commit/9dd4bac))
+
+### ❤️ Contributors
+
+- Becem-gharbi <becem.gharbi@live.com>
+
 ## v0.2.0
 
 [compare changes](https://github.com/becem-gharbi/prisma-cloudflare/compare/v0.1.3...v0.2.0)
