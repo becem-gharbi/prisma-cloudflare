@@ -9,5 +9,5 @@ export const naiveui: Partial<ModuleOptions> = {
   },
   themeConfig: {
     ...generateTailwindColorThemes(),
-  }
+  },
 }
